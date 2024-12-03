@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: merilhan <merilhan@42kocaeli.com.tr>       +#+  +:+       +#+        */
+/*   By: merilhan <merilhan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 07:30:44 by merilhan          #+#    #+#             */
-/*   Updated: 2024/11/28 07:31:07 by merilhan         ###   ########.fr       */
+/*   Updated: 2024/12/03 19:22:48 by merilhan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ft_format(va_list argv, char format)
 	else if (format == 's')
 		return (ft_print_string(va_arg(argv, char *)));
 	else if (format == 'p')
-		return (ft_print_hex(va_arg(argv, unsigned long), format, 0));
+		return (ft_putptr(va_arg(argv, unsigned long)));
 	else if (format == 'd' || format == 'i')
 		return (ft_print_integer(va_arg(argv, int), 0));
 	else if (format == 'u')
